@@ -9,12 +9,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      height: 100dvh;
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #f2f2f2;
       text-align: center;
       padding: 20px;
+      overflow: hidden;
     }
     .excuse {
       max-width: 90vw;
@@ -36,6 +37,11 @@
 </head>
 <body>
   <div class="excuse" id="excuse" onclick="showExcuse()"></div>
+  <div style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
+  <button onclick="shareExcuse()" title="Copy link to this excuse" style="background: none; border: none; font-size: 1.5em; cursor: pointer; color: #444;">
+    🔗
+  </button>
+</div>
 
   <script>
     const excuses = [
@@ -148,9 +154,36 @@
       const excuseElement = document.getElementById('excuse');
       const randomExcuse = excuses[Math.floor(Math.random() * excuses.length)];
       excuseElement.textContent = randomExcuse;
+      history.replaceState(null, '', '#' + encodeURIComponent(randomExcuse));
     }
 
-    showExcuse();
+    const hash = decodeURIComponent(location.hash.slice(1));
+    if (hash && excuses.includes(hash)) {
+      document.getElementById('excuse').textContent = hash;
+    } else {
+      showExcuse();
+    }
+  function shareExcuse() {
+  const excuse = document.getElementById('excuse').textContent;
+  const url = window.location.origin + window.location.pathname + '#' + encodeURIComponent(excuse);
+  navigator.clipboard.writeText(url).then(() => {
+    const iconButton = document.querySelector('button[onclick="shareExcuse()"]');
+    const msg = document.createElement('div');
+    msg.textContent = '✓';
+    msg.style.position = 'fixed';
+    msg.style.top = '12px';
+    msg.style.right = '45px';
+    msg.style.background = '#4caf50';
+    msg.style.color = 'white';
+    msg.style.padding = '2px 6px';
+    msg.style.borderRadius = '50%';
+    msg.style.fontSize = '0.8em';
+    msg.style.zIndex = '9999';
+    msg.style.transition = 'opacity 0.3s ease';
+    iconButton.parentElement.appendChild(msg);
+    setTimeout(() => msg.remove(), 1500);
+  });
+}
   </script>
 <footer style="position: fixed; bottom: 10px; width: 100%; text-align: center; font-size: 0.8em; color: #888;">
   © 2025 CustomerSupportExcuses.com. Made with 🤯 by Tony.
