@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Support Excuses</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+    }
+    .excuse {
+      max-width: 600px;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      font-size: 1.5em;
+    }
+  </style>
+</head>
+<body>
+  <div class="excuse" id="excuse"></div>
+
+  <script>
+    const excuses = [
+      "I'm sorry, our system is currently updating. Please try again later.",
+      "It seems to be working fine on our end.",
+      "Have you tried clearing your cache and cookies?",
+      "This issue has been escalated to the appropriate team.",
+      "We’re experiencing a higher than usual volume of inquiries.",
+      "Please reboot your device and let us know if the issue persists.",
+      "That’s a known issue and we’re working on it.",
+      "Our engineering team is already aware of this problem.",
+      "Unfortunately, that's not something we support at the moment.",
+      "Can you send us a screenshot so we can better understand the issue?",
+      "We apologize for the inconvenience.",
+      "Thank you for your patience.",
+      "We’re unable to replicate the issue on our end.",
+      "The issue should be resolved now. Can you confirm?",
+      "That functionality is coming in a future update.",
+      "It's a limitation of the current version.",
+      "We have forwarded your feedback to our development team.",
+      "This is a rare issue that we are currently investigating.",
+      "Thanks for pointing that out, we’ll look into it.",
+      "Can you try from a different browser or device?",
+      "That's expected behavior, actually.",
+      "Let me connect you with someone from the technical team.",
+      "This seems to be an isolated case.",
+      "You may need to uninstall and reinstall the application.",
+      "Our team is aware and working hard to fix this.",
+      "This issue is under review.",
+      "That’s strange. We’ve never seen that before.",
+      "Are you sure you’re using the latest version?",
+      "Please give it 24–48 hours to resolve.",
+      "We’re in the process of migrating servers."
+    ];
+
+    document.getElementById('excuse').textContent = excuses[Math.floor(Math.random() * excuses.length)];
+  </script>
+</body>
+</html>
