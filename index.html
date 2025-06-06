@@ -34,6 +34,16 @@
       }
     }
   </style>
+<style>
+    body.dark {
+      background-color: #111;
+      color: #eee;
+    }
+    body.dark .excuse {
+      background-color: #1e1e1e;
+      color: #f5f5f5;
+    }
+  </style>
 </head>
 <body>
   <div class="excuse" id="excuse" onclick="showExcuse()"></div>
@@ -157,7 +167,11 @@
       history.replaceState(null, '', '#' + encodeURIComponent(randomExcuse));
     }
 
-    const hash = decodeURIComponent(location.hash.slice(1));
+    if ((new Date()).getHours() >= 20 || (new Date()).getHours() < 7) {
+  document.body.classList.add('dark');
+}
+
+const hash = decodeURIComponent(location.hash.slice(1));
     if (hash && excuses.includes(hash)) {
       document.getElementById('excuse').textContent = hash;
     } else {
@@ -165,7 +179,48 @@
     }
   function shareExcuse() {
   const excuse = document.getElementById('excuse').textContent;
+
+  const shareMenu = document.createElement('div');
+  shareMenu.style.position = 'fixed';
+  shareMenu.style.top = '50px';
+  shareMenu.style.right = '10px';
+  shareMenu.style.background = '#fff';
+  shareMenu.style.padding = '8px';
+  shareMenu.style.border = '1px solid #ccc';
+  shareMenu.style.borderRadius = '6px';
+  shareMenu.style.boxShadow = '0 2px 6px rgba(0,0,0,0.2)';
+  shareMenu.style.fontSize = '0.9em';
+  shareMenu.style.zIndex = '9999';
+
   const url = window.location.origin + window.location.pathname + '#' + encodeURIComponent(excuse);
+
+  const tg = document.createElement('a');
+  tg.href = `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(excuse)}`;
+  tg.textContent = 'Share via Telegram';
+  tg.target = '_blank';
+  tg.style.display = 'block';
+  tg.style.marginBottom = '6px';
+
+  const tw = document.createElement('a');
+  tw.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(excuse + ' ' + url)}`;
+  tw.textContent = 'Tweet this';
+  tw.target = '_blank';
+  tw.style.display = 'block';
+
+  const close = document.createElement('div');
+  close.textContent = '×';
+  close.style.position = 'absolute';
+  close.style.top = '4px';
+  close.style.right = '6px';
+  close.style.cursor = 'pointer';
+  close.style.fontWeight = 'bold';
+  close.onclick = () => shareMenu.remove();
+
+  shareMenu.appendChild(close);
+  shareMenu.appendChild(tg);
+  shareMenu.appendChild(tw);
+  document.body.appendChild(shareMenu);
+
   navigator.clipboard.writeText(url).then(() => {
     const iconButton = document.querySelector('button[onclick="shareExcuse()"]');
     const msg = document.createElement('div');
@@ -183,6 +238,7 @@
     iconButton.parentElement.appendChild(msg);
     setTimeout(() => msg.remove(), 1500);
   });
+  
 }
   </script>
 <footer style="position: fixed; bottom: 10px; width: 100%; text-align: center; font-size: 0.8em; color: #888;">
