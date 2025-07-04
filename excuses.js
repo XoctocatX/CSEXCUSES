@@ -101,5 +101,6 @@ const excuses = [
       "We blame the toaster, just to be safe.",
       "Support ran into a philosophical deadlock.",
       "Our cache is locked in a custody battle with the CDN.",
-      "This error only appears when someone is watching."
+      "This error only appears when someone is watching.",
+      "Your request was handled by a parallel universe version of our system. Please, change the universe to receive a response."
     ];
