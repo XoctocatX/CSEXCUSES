@@ -11,19 +11,47 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Customer Support Excuses</title>
+  <title>Customer Support Excuses — A Catalog of Things Reps Actually Say</title>
+  <meta name="description" content="A growing catalog of customer support excuses, from polite corporate boilerplate to cosmic absurdities. Browse 100+ excuses your support rep might use today.">
+  <link rel="canonical" href="https://customersupportexcuses.com/">
+  <meta property="og:title" content="Customer Support Excuses">
+  <meta property="og:description" content="A catalog of customer support excuses, from corporate boilerplate to cosmic absurdities. 100+ entries.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://customersupportexcuses.com/">
+  <meta property="og:image" content="https://customersupportexcuses.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Customer Support Excuses",
+    "url": "https://customersupportexcuses.com/",
+    "description": "A growing catalog of customer support excuses, from polite corporate boilerplate to cosmic absurdities."
+  }
+  </script>
   <style>
+    html, body { margin: 0; padding: 0; }
     body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #222;
+      text-align: center;
+    }
+    .hero {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100dvh;
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      text-align: center;
+      min-height: 100dvh;
       padding: 20px;
-      overflow: hidden;
+      box-sizing: border-box;
+    }
+    h1.sr-title {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0);
+      white-space: nowrap; border: 0;
     }
     .excuse {
       max-width: 90vw;
@@ -36,28 +64,168 @@
       line-height: 1.4;
     }
     @media (max-width: 600px) {
-      .excuse {
-        font-size: 1.4em;
-        padding: 1em;
-      }
+      .excuse { font-size: 1.4em; padding: 1em; }
     }
-    body.dark {
-      background-color: #111;
-      color: #eee;
+    .all {
+      padding: 2em 1.2em 4em;
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: left;
+      line-height: 1.6;
     }
-    body.dark .excuse {
-      background-color: #1e1e1e;
-      color: #f5f5f5;
+    .all h2 {
+      font-size: 1.4em;
+      margin-bottom: 0.4em;
+      text-align: center;
     }
+    .all p.intro {
+      color: #666;
+      text-align: center;
+      margin: 0 0 1.8em;
+      font-size: 0.95em;
+    }
+    .all ol {
+      padding-left: 1.4em;
+      margin: 0;
+    }
+    .all ol li {
+      margin-bottom: 0.5em;
+      font-size: 1em;
+    }
+    .all-foot {
+      text-align: center;
+      margin-top: 2em;
+      font-size: 0.85em;
+      color: #888;
+    }
+    body.dark { background-color: #111; color: #eee; }
+    body.dark .excuse { background-color: #1e1e1e; color: #f5f5f5; }
+    body.dark .all p.intro { color: #aaa; }
+    body.dark .all-foot { color: #aaa; }
   </style>
 </head>
 <body>
-  <div class="excuse" id="excuse" onclick="showExcuse()"></div>
+  <h1 class="sr-title">Customer Support Excuses</h1>
+  <section class="hero">
+    <div class="excuse" id="excuse" onclick="showExcuse()"></div>
+  </section>
   <div style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
     <button onclick="shareExcuse()" title="Copy link to this excuse" style="background: none; border: none; font-size: 1.5em; cursor: pointer; color: #444;">
       🔗
     </button>
   </div>
+
+  <section class="all" id="browse">
+    <h2>Browse All Excuses</h2>
+    <p class="intro">Every excuse in the catalog, rendered for the record (and for Google).</p>
+    <ol>
+      <li>I'm sorry, our system is currently updating. Please try again later.</li>
+      <li>It seems to be working fine on our end.</li>
+      <li>Have you tried clearing your cache and cookies?</li>
+      <li>This issue has been escalated to the appropriate team.</li>
+      <li>We're experiencing a higher than usual volume of inquiries.</li>
+      <li>Please reboot your device and let us know if the issue persists.</li>
+      <li>That's a known issue and we're working on it.</li>
+      <li>Our engineering team is already aware of this problem.</li>
+      <li>Unfortunately, that's not something we support at the moment.</li>
+      <li>Can you send us a screenshot so we can better understand the issue?</li>
+      <li>We apologize for the inconvenience.</li>
+      <li>Thank you for your patience.</li>
+      <li>We're unable to replicate the issue on our end.</li>
+      <li>The issue should be resolved now. Can you confirm?</li>
+      <li>That functionality is coming in a future update.</li>
+      <li>It's a limitation of the current version.</li>
+      <li>We have forwarded your feedback to our development team.</li>
+      <li>This is a rare issue that we are currently investigating.</li>
+      <li>Thanks for pointing that out, we'll look into it.</li>
+      <li>Can you try from a different browser or device?</li>
+      <li>That's expected behavior, actually.</li>
+      <li>Let me connect you with someone from the technical team.</li>
+      <li>This seems to be an isolated case.</li>
+      <li>You may need to uninstall and reinstall the application.</li>
+      <li>Our team is aware and working hard to fix this.</li>
+      <li>This issue is under review.</li>
+      <li>That's strange. We've never seen that before.</li>
+      <li>Are you sure you're using the latest version?</li>
+      <li>Please give it 24&ndash;48 hours to resolve.</li>
+      <li>We're in the process of migrating servers.</li>
+      <li>Saturn being in Scorpio caused an unexpected server reboot.</li>
+      <li>Sunlight reflected off swamp gas vapors disrupted our API.</li>
+      <li>Our servers got emotionally overwhelmed and needed a break.</li>
+      <li>The hamster powering our mainframe took a nap.</li>
+      <li>Cosmic rays interfered with our quantum processors.</li>
+      <li>Your request collided with a parallel universe version of our system.</li>
+      <li>We accidentally enabled retrograde mode.</li>
+      <li>Our AI became self-aware and started filtering bugs by vibe.</li>
+      <li>System latency was caused by Mercury retrograde.</li>
+      <li>A flock of pigeons sat on the data center's roof and overloaded the signal.</li>
+      <li>The support gnome responsible for your request is on vacation.</li>
+      <li>An interdimensional rift opened during your session.</li>
+      <li>Our load balancer chose to pursue a career in music.</li>
+      <li>The bug was a feature in an alternate timeline.</li>
+      <li>The algorithm saw its own shadow and went into hibernation.</li>
+      <li>We experienced a temporary glitch in the matrix.</li>
+      <li>Solar flares made our servers unusually sentimental.</li>
+      <li>Our VPN took a detour through the Bermuda Triangle.</li>
+      <li>Support was delayed by a surprise dragon attack.</li>
+      <li>The compliance daemon is still negotiating with reality.</li>
+      <li>Your request was reclassified as a modern art piece.</li>
+      <li>Quantum tunneling misplaced a packet or two.</li>
+      <li>Our captcha started asking philosophical questions.</li>
+      <li>The data had to be blessed by a certified byte priest.</li>
+      <li>We had to consult the sacred support scrolls.</li>
+      <li>Someone fed the AI after midnight. We're sorry.</li>
+      <li>Our DNS caught a cold from the neighboring server.</li>
+      <li>The log files unionized and went on strike.</li>
+      <li>We mistook your issue for an existential crisis.</li>
+      <li>Support was briefly outsourced to an octopus.</li>
+      <li>A rogue semicolon disrupted the space-time code fabric.</li>
+      <li>One of our developers merged with the mainframe.</li>
+      <li>The feedback loop sang a lullaby and put itself to sleep.</li>
+      <li>Our cloud infrastructure got too literal and started raining.</li>
+      <li>Someone spilled coffee on the internet again.</li>
+      <li>The logs told us this was a dream, not a bug.</li>
+      <li>Our AI assistant fell into a recursive apology loop.</li>
+      <li>The firewall tried to defend its honor in a duel.</li>
+      <li>A goose flew through the data stream. Classic problem.</li>
+      <li>Our NTP server is off because time is just a concept.</li>
+      <li>Support can't respond while balancing on one leg.</li>
+      <li>The interface was too busy contemplating existence.</li>
+      <li>All bytes must pass the Trial of the Socket.</li>
+      <li>We're waiting for divine inspiration to solve this.</li>
+      <li>Your session was too cool and melted the cache.</li>
+      <li>The bit gremlins escaped again. We're on it.</li>
+      <li>Our cloud provider misinterpreted your request as haiku.</li>
+      <li>The form rejected your input for being too honest.</li>
+      <li>That endpoint is haunted. Try another.</li>
+      <li>Support was delayed while chasing a rainbow exception.</li>
+      <li>Our DevOps engineer is currently reincarnating.</li>
+      <li>Support is bound by sacred scrolls not to interfere yet.</li>
+      <li>Our CI/CD pipeline got stuck in the circle of life.</li>
+      <li>The request fell into a Schr&ouml;dinger state &mdash; resolved and unresolved.</li>
+      <li>We ran out of magic smoke. Fresh shipment soon.</li>
+      <li>The servers are currently meditating.</li>
+      <li>A wizard did it, and refuses to undo it.</li>
+      <li>We accidentally configured our backend in Elvish.</li>
+      <li>The bug achieved enlightenment and ascended.</li>
+      <li>Support is now only available during lunar eclipses.</li>
+      <li>The database is sulking and needs encouragement.</li>
+      <li>Support was temporarily abducted by marketing.</li>
+      <li>All 1s turned into 0s during a solar flare.</li>
+      <li>The index file went on a vision quest.</li>
+      <li>A cursed semicolon corrupted the CSS ley lines.</li>
+      <li>Your request interfered with the CEO's horoscope.</li>
+      <li>The system is trapped in a moral dilemma.</li>
+      <li>The dev team merged with the frontend spiritually.</li>
+      <li>That's not a bug, it's a performance art piece.</li>
+      <li>We blame the toaster, just to be safe.</li>
+      <li>Support ran into a philosophical deadlock.</li>
+      <li>Our cache is locked in a custody battle with the CDN.</li>
+      <li>This error only appears when someone is watching.</li>
+      <li>Your request was handled by a parallel universe version of our system. Please, change the universe to receive a response.</li>
+    </ol>
+    <p class="all-foot"><a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a></p>
+  </section>
 
   <!-- Подключаем внешний файл с отговорками -->
   <script src="excuses.js"></script>
@@ -154,7 +322,7 @@
     }
   </script>
 
-  <footer style="position: fixed; bottom: 10px; width: 100%; text-align: center; font-size: 0.8em; color: #888;">
+  <footer style="text-align: center; font-size: 0.8em; color: #888; padding: 1em 0 2em;">
     © 2025 CustomerSupportExcuses.com. Made with 🤯 by Tony.
   </footer>
 </body>
